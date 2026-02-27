@@ -36,6 +36,10 @@ const Body = () => {
                         onClick={() => {
                             // filter the restaurant card and update the UI
                             // searchText
+                            const filteredRestaurant = listOfRestaurants.filter(
+                                (res) => res?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+                            );
+                            setListOfRestaurants(filteredRestaurant);
                         }}
                     >Search</button>
                 </div>
